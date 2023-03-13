@@ -1,0 +1,19 @@
+ git init (Iniciar proyecto)
+git remote add origin *URL* (vincular repositorio)
+git remote -v (ver si estoy vinculado al repo)
+
+git status (estado)
+git add . (Guardar cambios)
+git commit -m "*NOTA*" (Hacer un commit)
+
+git diff (Ve diferencias entre el commit anterior y este)
+
+git push origin *RAMA* (Subir los cambios)
+git pull origin *RAMA* (Descargar repositorio )
+git clone *URL* (Descargar repositorio )
+
+git fetch (muestra todas las ramas)
+git checkout *RAMA*(cambiarse de rama)
+git checkout *CODIGO DE UN COMMIT*(Volver a ese commit)
+
+
