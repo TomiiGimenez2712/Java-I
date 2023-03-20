@@ -18,12 +18,14 @@ public class Ej4_Guia5 {
           for (j = 0; j < 4; j++){
               matriz[i][j] = (int) (Math.random() * 10);
           }
+      }
           
         for (i = 0; i < 4; i++) {
           for (j = 0; j < 4; j++){
               traspuesta[i][j] = matriz[j][i];
           
           }
+        }
           
           
           //-------------------Impresion--------------
@@ -47,5 +49,5 @@ public class Ej4_Guia5 {
     }
 
 }
-    }
-}
+    
+
