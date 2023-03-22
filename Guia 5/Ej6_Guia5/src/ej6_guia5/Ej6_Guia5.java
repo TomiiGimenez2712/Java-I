@@ -12,7 +12,7 @@ public class Ej6_Guia5 {
 
     int[][] matriz =new int[3][3];
 
-    int i, j, num, suma1=0, suma2=0, suma3=0, diagonal1, diagonal2;
+    int i, j, num, suma1=0, suma2=0, suma3=0,suma4=0, suma5=0,suma6=0, diagonal1, diagonal2;
    
     
     
@@ -47,9 +47,22 @@ public class Ej6_Guia5 {
                   case 2:
                       suma3+= matriz[i][j];
                       break;
-              } 
+                } 
+              switch(j){
+                  case 0:
+                      suma4+= matriz[i][j];
+                      break;
+                  case 1:
+                      suma5+= matriz[i][j];
+                      break;
+                  case 2:
+                      suma6+= matriz[i][j];
+                      break;
+                 } 
+             
           }
         }
+       
         diagonal1= matriz[0][0]+matriz[1][1]+matriz[2][2];
         diagonal2= matriz[2][0]+matriz[1][1]+matriz[0][2];
           
@@ -65,7 +78,7 @@ public class Ej6_Guia5 {
 
         
         
-        if(suma1==suma2 && suma1==suma3 && suma1==diagonal1 && suma1==diagonal2){
+        if(suma1==suma2 && suma1==suma3 && suma1==diagonal1 && suma1==diagonal2 && suma1==suma4 && suma1==suma5 && suma1==suma6){
             System.out.println("La Matriz es magica");
         }
         else{
