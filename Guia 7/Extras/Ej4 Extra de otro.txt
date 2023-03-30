@@ -1,0 +1,99 @@
+
+Receta r1 = new Receta("Turron");
+        Receta r2 = new Receta("Flan");
+        Receta r3 = new Receta("Empandas");
+        Receta r4 = new Receta("fideos");
+
+        Cocina cocina = new Cocina();
+        cocina.agregar(r1);
+        cocina.agregar(r2);
+        cocina.agregar(r3);
+        cocina.agregar(r4);
+
+        System.out.println(cocina.buscarReceta("Empandas").getNombre());
+        for (Receta receta : cocina.getRecetas()) {
+            System.out.println(receta.getNombre());
+        }
+    }
+    
+}
+
+
+
+
+
+public class Cocina {
+
+    private List<Receta> recetas;
+
+    public Cocina() {
+        this.recetas = new ArrayList<>(); 
+    }
+
+    public Cocina(List<Receta> recetas) {
+        this.recetas = new ArrayList<>();
+        this.recetas = recetas;
+    }
+
+    public List<Receta> getRecetas() {
+        return recetas;
+    }
+
+    public void setRecetas(List<Receta> recetas) {
+        this.recetas = recetas;
+    }
+
+    public void agregar(Receta r) {
+        this.recetas.add(r);
+    }
+
+    public void romover(Receta r) {
+        this.recetas.remove(r);
+    }
+
+    public Receta buscarReceta(String nombre){
+        for (Receta receta : recetas) {
+            if(receta.getNombre().equals(nombre)){
+                return receta;
+            }
+        }
+        return null;
+    }
+
+
+
+
+public class Receta {
+    private String ingredientes ; 
+private String nombre ; 
+
+    public Receta( String nombre) {
+       
+        this.nombre = nombre;
+    }
+
+    public Receta() {
+        
+    }
+
+    public String getIngredientes() {
+        return ingredientes;
+    }
+
+    public void setIngredientes(String ingredientes) {
+        this.ingredientes = ingredientes;
+    }
+
+    public String getNombre() {
+        return nombre;
+    }
+
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
+    }
+    
+
+    
+    
+    
+}
